@@ -1,4 +1,9 @@
 module.exports = {
+  theme: '',
+  // title: 'VuePress + Element',
+  description: 'VuePress搭建Element的组件库文档教程示例代码',
+  base: '/',
+  port: '8080',
   themeConfig: {
     logo: "/assets/img/logo.png",
     nav: [
@@ -6,7 +11,6 @@ module.exports = {
       { text: "组件", link: "/main/input" },
       { text: "External", link: "https://google.com" },
     ],
-    plugins: ["demo-container"],
     sidebar: {
       "/main/": [
         {
@@ -21,4 +25,7 @@ module.exports = {
       "/": ["" /* / */],
     },
   },
+  head: [],
+  plugins: [require('./my-plugin.js'), 'demo-container'],
+  markdown: {}
 };
